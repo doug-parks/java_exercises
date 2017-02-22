@@ -405,6 +405,19 @@ public class BasicExercises {
     }
 
     public static void exercise38(){
+        //38. Write a Java program to count the letters, spaces, numbers and other characters of an input string.
+        //Expected Output
+
+        //letter: 23
+        //space: 9
+        //number: 10
+        //other: 6
+
+    }
+
+    public static void exercise39(){
+        //39. Write a Java program to create and display unique three-digit number using 1, 2, 3, 4.
+        //Also count how many three-digit numbers are there.
 
     }
 
