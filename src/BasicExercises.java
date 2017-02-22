@@ -404,6 +404,10 @@ public class BasicExercises {
         //Write a Java program to reverse a string.
     }
 
+    public static void exercise38(){
+
+    }
+
     public static double input() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter a number: ");
