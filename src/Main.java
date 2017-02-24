@@ -41,7 +41,7 @@ public class Main {
         //BasicExercises.exercise36();
         //BasicExercises.exercise37();
         //BasicExercises.exercise38();
-        BasicExercises.exercise39();
+        //BasicExercises.exercise39();
 
 
 
