@@ -402,6 +402,16 @@ public class BasicExercises {
 
     public static void exercise37(){
         //Write a Java program to reverse a string.
+        String string = stringInput(); //get a string from the console
+
+        char[] charArray = string.toCharArray(); //convert the string to a char array
+        char[] charArray2 = new char[string.length()]; //create a second char array of the same length
+
+        for (int i = 0; i<string.length(); i++){
+                charArray2[i] = charArray[string.length()-i-1]; //increment through charArray in reverse and assign
+            }
+        String newString = new String(charArray2); //create new string from charArray2
+        System.out.println(newString); //print values
     }
 
     public static void exercise38(){
@@ -433,6 +443,13 @@ public class BasicExercises {
         System.out.println("Please enter a number: ");
         int number = scanner.nextInt();
         return number;
+    }
+
+    public static String stringInput() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter a string: ");
+        String string = scanner.nextLine();
+        return string;
     }
 
 
