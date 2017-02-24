@@ -2,8 +2,8 @@
  * Created by arbybaconator on 2/20/17.
  */
 
-import com.sun.tools.classfile.CharacterRangeTable_attribute;
-import com.sun.tools.javac.main.JavaCompiler;
+//import com.sun.tools.classfile.CharacterRangeTable_attribute;
+//import com.sun.tools.javac.main.JavaCompiler;
 import sun.plugin.JavaRunTime;
 
 import java.util.Scanner;
@@ -43,8 +43,8 @@ public class BasicExercises {
 
     public static void exercise5() {
         //Write a Java program that takes two numbers as input and display the product of two numbers.
-        double number1 = input();
-        double number2 = input();
+        double number1 = UtilityClasses.input();
+        double number2 = UtilityClasses.input();
 
         System.out.println("\nnumber 1: " + number1 + "\nnumber 2: " + number2 + "\nThe sum is: " +
                 (number1 + number2));
@@ -53,8 +53,8 @@ public class BasicExercises {
 
     public static void exercise6() {
         //Write a Java program to print the sum (addition), multiply, subtract, divide and remainder of two numbers.
-        double number1 = input();
-        double number2 = input();
+        double number1 = UtilityClasses.input();
+        double number2 = UtilityClasses.input();
 
         System.out.println("\nnumber 1: " + number1 + "\nnumber 2: " + number2);
         System.out.println(number1 + " + " + number2 + " = " + (number1 + number2));
@@ -67,7 +67,7 @@ public class BasicExercises {
 
     public static void exercise7() {
         //7. Write a Java program that takes a number as input and prints its multiplication table up to 10.
-        double number1 = input();
+        double number1 = UtilityClasses.input();
 
         for (int i = 1; i <= 10; i++) {
             System.out.println(number1 + " * " + i + " = " + (number1 * i));
@@ -108,7 +108,7 @@ public class BasicExercises {
 
     public static void exercise11() {
         //11. Write a Java program to print the area and perimeter of a circle.
-        double number1 = input();
+        double number1 = UtilityClasses.input();
 
         System.out.println("Your radius is: " + number1);
         System.out.println("The perimeter is: " + 2 * number1 * Math.PI);
@@ -118,9 +118,9 @@ public class BasicExercises {
 
     public static void exercise12() {
         //12. Write a Java program that takes three numbers as input to calculate and print the average of the numbers.
-        double number1 = input();
-        double number2 = input();
-        double number3 = input();
+        double number1 = UtilityClasses.input();
+        double number2 = UtilityClasses.input();
+        double number3 = UtilityClasses.input();
 
         System.out.println("The average of " + number1 + ", " + number2 + ", " + number3 + " is: " +
                 (number1 + number2 + number3) / 3);
@@ -129,8 +129,8 @@ public class BasicExercises {
 
     public static void exercise13() {
         //13. Write a Java program to print the area and perimeter of a rectangle.
-        double number1 = input();
-        double number2 = input();
+        double number1 = UtilityClasses.input();
+        double number2 = UtilityClasses.input();
 
         System.out.println("Your width is: " + number1);
         System.out.println("Your height is: " + number2);
@@ -169,8 +169,8 @@ public class BasicExercises {
 
     public static void exercise15() {
         //15. Write a Java program to swap two variables.
-        double number1 = input();
-        double number2 = input();
+        double number1 = UtilityClasses.input();
+        double number2 = UtilityClasses.input();
 
         System.out.println("number1 is " + number1);
         System.out.println("number2 is " + number2);
@@ -203,8 +203,8 @@ public class BasicExercises {
 
     public static void exercise17() {
         //Write a Java program to add two binary numbers.
-        int number1 = integerInput();
-        int number2 = integerInput();
+        int number1 = UtilityClasses.integerInput();
+        int number2 = UtilityClasses.integerInput();
         int number3 = number1 + number2;
 
         System.out.println(Integer.toBinaryString(number1) + " + " + Integer.toBinaryString(number2) + " = " +
@@ -213,8 +213,8 @@ public class BasicExercises {
 
     public static void exercise18() {
         //18. Write a Java program to multiply two binary numbers.
-        int number1 = integerInput();
-        int number2 = integerInput();
+        int number1 = UtilityClasses.integerInput();
+        int number2 = UtilityClasses.integerInput();
         int number3 = number1 * number2;
 
         System.out.println(Integer.toBinaryString(number1) + " * " + Integer.toBinaryString(number2) + " = " +
@@ -260,6 +260,7 @@ public class BasicExercises {
         System.out.println("Please enter a decimal number: ");
         int number = scanner.nextInt();
 
+
         while (number < 0 || number >= 20) {
             System.out.println("Number must be between 0-20");
             System.out.println("Please enter a decimal number: ");
@@ -278,7 +279,7 @@ public class BasicExercises {
     }
 
     public static void exercise31() {
-        System.out.println("| Java Version:           " + JavaCompiler.version());
+        System.out.println("| Java Version:           " + System.getProperty("JavaCompiler.version"));
         System.out.println("| Java Runtime Version:   " + System.getProperty("java.runtime.version"));
         System.out.println("| Java Home:              " + System.getProperty("java.home"));
         System.out.println("| Java Vendor:            " + System.getProperty("java.vendor"));
@@ -294,8 +295,8 @@ public class BasicExercises {
         //25 < 39
         //25 <= 39
 
-        int number1 = integerInput();
-        int number2 = integerInput();
+        int number1 = UtilityClasses.integerInput();
+        int number2 = UtilityClasses.integerInput();
 
         if (number1 == number2) {
             System.out.println(number1 + " = " + number2);
@@ -320,7 +321,7 @@ public class BasicExercises {
 
     public static void exercise33() {
         //33. Write a Java program and compute the sum of the digits of an integer.
-        int number1 = integerInput();
+        int number1 = UtilityClasses.integerInput();
         int length = String.valueOf(number1).length();
         char currentNumber = 0;
         int sum = 0;
@@ -339,7 +340,7 @@ public class BasicExercises {
         //Area of a hexagon = (6 * s^2)/(4*tan(π/6))
         //where s is the length of a side
 
-        int number1 = integerInput();
+        int number1 = UtilityClasses.integerInput();
         double area = ((6 * (number1 * number1)) / (4 * Math.tan(Math.PI / 6)));
 
         System.out.println("The area of a hexagon where each side has a length of " + number1 + " = " + area);
@@ -350,8 +351,8 @@ public class BasicExercises {
         //Area of a polygon = (n*s^2)/(4*tan(π/n))
         //where n is n-sided polygon and s is the length of a side
 
-        int number1 = integerInput();
-        int sides = integerInput();
+        int number1 = UtilityClasses.integerInput();
+        int sides = UtilityClasses.integerInput();
 
         double area = (sides * (number1 * number1)) / (4.0 * Math.tan((Math.PI / sides)));
 
@@ -374,16 +375,16 @@ public class BasicExercises {
 
         System.out.println("We are going to compute the distance between two points on the surface of the earth. \n");
         System.out.println("What is the lat of coordinate 1?");
-        double lat1 = input();
+        double lat1 = UtilityClasses.input();
 
         System.out.println("What is the lon of coordinate 1?");
-        double lon1 = input();
+        double lon1 = UtilityClasses.input();
 
         System.out.println("What is the lat of coordinate 2?");
-        double lat2 = input();
+        double lat2 = UtilityClasses.input();
 
         System.out.println("What is the lon of coordinate 2?");
-        double lon2 = input();
+        double lon2 = UtilityClasses.input();
 
         //convert all points to radians
 
@@ -404,7 +405,7 @@ public class BasicExercises {
 
     public static void exercise37(){
         //Write a Java program to reverse a string.
-        String string = stringInput(); //get a string from the console
+        String string = UtilityClasses.stringInput(); //get a string from the console
 
         char[] charArray = string.toCharArray(); //convert the string to a char array
         char[] charArray2 = new char[string.length()]; //create a second char array of the same length
@@ -430,7 +431,7 @@ public class BasicExercises {
         int countNumber = 0;
         int countOther = 0;
 
-        String string = stringInput();
+        String string = UtilityClasses.stringInput();
 
         for (int i = 0; i < string.length(); i++){
             if (Character.isDigit(string.charAt(i))){
@@ -470,26 +471,7 @@ public class BasicExercises {
         System.out.println("The total amount of unique 3 digit numbers is: " + amount);
     }
 
-    public static double input() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter a number: ");
-        double number = scanner.nextDouble();
-        return number;
-    }
 
-    public static int integerInput() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter a number: ");
-        int number = scanner.nextInt();
-        return number;
-    }
-
-    public static String stringInput() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter a string: ");
-        String string = scanner.nextLine();
-        return string;
-    }
 
 
 }

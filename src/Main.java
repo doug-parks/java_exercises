@@ -3,6 +3,18 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
+        //DataTypeExercises.exercise1();
+        //DataTypeExercises.exercise2();
+        //DataTypeExercises.exercise3();
+        //DataTypeExercises.exercise4();
+        //DataTypeExercises.exercise5();
+        //DataTypeExercises.exercise6();
+        //DataTypeExercises.exercise7();
+        //DataTypeExercises.exercise8();
+        DataTypeExercises.exercise9();
+        //DataTypeExercises.exercise10();
+
+
         //BasicExercises.exercise1();
         //BasicExercises.exercise2();
         //BasicExercises.exercise3();
