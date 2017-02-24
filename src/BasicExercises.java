@@ -2,10 +2,12 @@
  * Created by arbybaconator on 2/20/17.
  */
 
+import com.sun.tools.classfile.CharacterRangeTable_attribute;
 import com.sun.tools.javac.main.JavaCompiler;
 import sun.plugin.JavaRunTime;
 
 import java.util.Scanner;
+
 
 public class BasicExercises {
 
@@ -423,12 +425,49 @@ public class BasicExercises {
         //number: 10
         //other: 6
 
+        int countLetter = 0;
+        int countSpace = 0;
+        int countNumber = 0;
+        int countOther = 0;
+
+        String string = stringInput();
+
+        for (int i = 0; i < string.length(); i++){
+            if (Character.isDigit(string.charAt(i))){
+                countNumber++;
+            }
+            else if (Character.isAlphabetic(string.charAt(i))){
+                countLetter++;
+            }
+            else if (Character.isSpace(string.charAt(i))){
+                countSpace++;
+            }
+            else {
+                countOther++;
+            }
+        }
+        System.out.println("Letters: " + countLetter);
+        System.out.println("Numbers: " + countNumber);
+        System.out.println("Spaces: " + countSpace);
+        System.out.println("Others: " + countOther);
     }
 
     public static void exercise39(){
         //39. Write a Java program to create and display unique three-digit number using 1, 2, 3, 4.
         //Also count how many three-digit numbers are there.
 
+        int amount = 0;
+        for(int i = 0; i< 4; i++){
+            for (int j = 0; j < 4; j++){
+                for (int k = 0; k < 4; k++){
+                    if (k != i && k != j && i != j){
+                        amount++;
+                        System.out.println(i + "" + j + "" + k);
+                    }
+                }
+            }
+        }
+        System.out.println("The total amount of unique 3 digit numbers is: " + amount);
     }
 
     public static double input() {

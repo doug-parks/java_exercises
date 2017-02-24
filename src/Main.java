@@ -39,9 +39,9 @@ public class Main {
         //BasicExercises.exercise34();
         //BasicExercises.exercise35();
         //BasicExercises.exercise36();
-        BasicExercises.exercise37();
+        //BasicExercises.exercise37();
         //BasicExercises.exercise38();
-        //BasicExercises.exercise39();
+        BasicExercises.exercise39();
 
 
 
