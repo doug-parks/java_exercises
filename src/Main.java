@@ -7,12 +7,12 @@ public class Main {
         //DataTypeExercises.exercise2();
         //DataTypeExercises.exercise3();
         //DataTypeExercises.exercise4();
-        //DataTypeExercises.exercise5();
+        DataTypeExercises.exercise5();
         //DataTypeExercises.exercise6();
         //DataTypeExercises.exercise7();
         //DataTypeExercises.exercise8();
         //DataTypeExercises.exercise9();
-        DataTypeExercises.exercise10();
+        //DataTypeExercises.exercise10();
 
 
         //BasicExercises.exercise1();

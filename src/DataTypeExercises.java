@@ -26,7 +26,7 @@ public class DataTypeExercises {
         //2. Write a Java program that reads a number in inches, converts it to meters
 
         double number1 = UtilityClasses.input();
-        double meters = number1*0.0254;
+        double meters = number1 * 0.0254;
 
         System.out.println(number1 + "\"" + " = " + String.format("%.1f", meters) + "m");
 
@@ -37,12 +37,12 @@ public class DataTypeExercises {
         int number1 = -1;
         int sum = 0;
 
-        while (number1 < 0 || number1 > 1000){
+        while (number1 < 0 || number1 > 1000) {
             System.out.println("Please enter a number between 0 and 1000");
             number1 = UtilityClasses.integerInput();
         }
 
-        for ( int i = 0; i<number1; i++){
+        for (int i = 0; i < number1; i++) {
             sum = i + sum;
         }
 
@@ -53,7 +53,7 @@ public class DataTypeExercises {
         //4. Write a Java program to convert minutes into a number of years and days.
         long minutes = UtilityClasses.longInput();
         long days = (minutes / 60) / 24;
-        long years = days/365;
+        long years = days / 365;
 
         System.out.println(minutes + " minutes \n" + days + " days \n" + years + " years \n");
     }
@@ -62,6 +62,18 @@ public class DataTypeExercises {
         //5. Write a Java program that prints the current time in GMT.
         //SimpleDateFormat sdf= new SimpleDateFormat("yyyy-MM-dd HH:mm:ss zzz");
 
+        System.out.print("Input the time zone offset to GMT: ");
+        long timeZoneChange = UtilityClasses.longInput();
+
+        long milliseconds = (System.currentTimeMillis());
+        long seconds = milliseconds / 1000;
+        long currentSecond = seconds % 60;
+        long minutes = seconds / 60;
+        long currentMinute = minutes % 60;
+        long hours = minutes / 60;
+        long currentHour = ((hours + timeZoneChange) % 24);
+
+        System.out.println("The current time is " + currentHour + ":" + currentMinute + ":" + currentSecond);
 
     }
 
@@ -74,7 +86,7 @@ public class DataTypeExercises {
         System.out.println("please enter your height, in inches");
         double height = UtilityClasses.input();
 
-        double bmi = (weight/(height * height)) * 703;
+        double bmi = (weight / (height * height)) * 703;
 
         System.out.println("Your BMI is: " + bmi);
     }
@@ -83,6 +95,29 @@ public class DataTypeExercises {
         //7. Write a Java program to takes the user for a distance (in meters) and the time was taken (as three numbers:
         // hours, minutes, seconds), and display the speed, in meters per second, kilometers per hour and miles per hour
         // (hint: 1 mile = 1609 meters).
+
+        System.out.println("Input distance in meters: ");
+        double distance = UtilityClasses.input();
+
+        System.out.println("Input hour: ");
+        double hours = UtilityClasses.input();
+
+        System.out.println("Input minutes: ");
+        double minutes = UtilityClasses.input();
+
+        System.out.println("Input seconds: ");
+        double seconds = UtilityClasses.input();
+
+        double totalSeconds = ((hours * 3600) + (minutes * 60) + seconds);
+
+        double mps = (distance / totalSeconds);
+        double kph = (distance / 1000) / ((totalSeconds / 3600));
+        double mph = kph / 1.609;
+
+        System.out.println("Your speed in meters per second is: " + mps);
+        System.out.println("Your speed in kilometers per hour is: " + kph);
+        System.out.println("Your speed in miles per hour is: " + mph);
+
     }
 
     public static void exercise8() {
@@ -101,21 +136,21 @@ public class DataTypeExercises {
     }
 
     public static void exercise9() {
-        //9. Write a Java program that accepts two integers from the user and then prints the sum, the difference, the product,
-        // the average, the distance (the difference between integer), the maximum (the larger of the two integers),
-        // the minimum (smaller of the two integers).
+        //9. Write a Java program that accepts two integers from the user and then prints the sum, the difference, the
+        // product,the average, the distance (the difference between integer), the maximum (the larger of the two
+        // integers), the minimum (smaller of the two integers).
 
         double number1 = UtilityClasses.input();
         double number2 = UtilityClasses.input();
 
-        System.out.println("The sum of " + number1 + " and " + number2 + " is: " + (number1+number2));
-        System.out.println("The difference between " + number1 + " and " + number2 + " is: " + (number1-number2));
-        System.out.println("The product of " + number1 + " and " + number2 + " is: " + (number1*number2));
-        System.out.println("The average of " + number1 + " and " + number2 + " is: " + (number1+number2)/2);
-        System.out.println("The distance between " + number1 + " and " + number2 + " is: " + Math.abs(number1-number2));
-        System.out.println("The largest between " + number1 + " and " + number2 + " is: " + Math.max(number1,number2));
+        System.out.println("The sum of " + number1 + " and " + number2 + " is: " + (number1 + number2));
+        System.out.println("The difference between " + number1 + " and " + number2 + " is: " + (number1 - number2));
+        System.out.println("The product of " + number1 + " and " + number2 + " is: " + (number1 * number2));
+        System.out.println("The average of " + number1 + " and " + number2 + " is: " + (number1 + number2) / 2);
+        System.out.println("The distance between " + number1 + " and " + number2 + " is: " + Math.abs(number1 - number2));
+        System.out.println("The largest between " + number1 + " and " + number2 + " is: " + Math.max(number1, number2));
         System.out.println("The smallest between " + number1 + " and " + number2 + " is: " +
-                Math.min(number1,number2));
+                Math.min(number1, number2));
     }
 
     public static void exercise10() {
@@ -125,8 +160,8 @@ public class DataTypeExercises {
 
         String string = Integer.toString(number1);
 
-        for(int i = 0; i < string.length(); i++){
-            newString = newString + (string.charAt(i))+ " ";
+        for (int i = 0; i < string.length(); i++) {
+            newString = newString + (string.charAt(i)) + " ";
         }
         System.out.println(newString);
     }
