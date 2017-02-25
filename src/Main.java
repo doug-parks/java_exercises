@@ -11,8 +11,8 @@ public class Main {
         //DataTypeExercises.exercise6();
         //DataTypeExercises.exercise7();
         //DataTypeExercises.exercise8();
-        DataTypeExercises.exercise9();
-        //DataTypeExercises.exercise10();
+        //DataTypeExercises.exercise9();
+        DataTypeExercises.exercise10();
 
 
         //BasicExercises.exercise1();
